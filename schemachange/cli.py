@@ -433,6 +433,7 @@ class SnowflakeSchemachangeSession:
       self.reset_session()
       self.reset_query_tag(script['script_name'])
       self.execute_snowflake_query(script_content)
+      self.reset_session()
       self.reset_query_tag()
       end = time.time()
       execution_time = round(end - start)
